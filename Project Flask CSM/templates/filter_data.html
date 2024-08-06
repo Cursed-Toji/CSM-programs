@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar Dados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Filtrar Dados</h1>
+        <form method="post">
+            <label for="data_inicio">Data de Início (dd/mm/yyyy)</label>
+            <input type="text" name="data_inicio" id="data_inicio" required>
+
+            <label for="data_fim">Data de Fim (dd/mm/yyyy)</label>
+            <input type="text" name="data_fim" id="data_fim" required>
+
+            <label for="status">Status</label>
+            <select name="status" id="status">
+                <option value="Revertido">Revertido</option>
+                <option value="Cancelado">Cancelado</option>
+            </select>
+
+            <button type="submit">Filtrar</button>
+        </form>
+        <a href="{{ url_for('index') }}">Voltar</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Dados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dados dos Clientes</h1>
+        <table>
+            <tr>
+                <th>Data</th>
+                <th>Nome do Cliente</th>
+                <th>CNPJ</th>
+                <th>Status</th>
+                <th>Módulo do Cancelamento</th>
+                <th>Nome da Empresa</th>
+                <th>Estado</th>
+                <th>Motivo</th>
+                <th>Analista</th>
+            </tr>
+            {% for dado in dados %}
+            <tr>
+                <td>{{ dado['Data'] }}</td>
+                <td>{{ dado['Nome do Cliente'] }}</td>
+                <td>{{ dado['CNPJ'] }}</td>
+                <td>{{ dado['Status'] }}</td>
+                <td>{{ dado['Módulo do Cancelamento'] }}</td>
+                <td>{{ dado['Nome da Empresa'] }}</td>
+                <td>{{ dado['Estado'] }}</td>
+                <td>{{ dado['Motivo'] }}</td>
+                <td>{{ dado['Analista'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('index') }}">Voltar</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Churn Control</h1>
+        <img src="https://i.postimg.cc/rsXsqk0Q/13339383.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('add_client') }}">Adicionar Cliente</a></li>
+                <li><a href="{{ url_for('show_data') }}">Mostrar Dados</a></li>
+                <li><a href="{{ url_for('filter_data') }}">Filtrar Dados</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
